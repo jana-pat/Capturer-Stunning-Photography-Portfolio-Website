@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <link rel="stylesheet" href="register.css" />
+    <title>Login or Register - Capturer</title>
+  </head>
+  <body>
+    <div class="section__container">
+      <h2 class="section__header">~ LOGIN OR REGISTER ~</h2>
+      <div class="auth__container">
+        <div class="auth__toggle">
+          <button class="active" onclick="showForm('login')">Login</button>
+          <button onclick="showForm('register')">Register</button>
+        </div>
+        <form id="login-form" class="auth__form active">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit" class="auth__btn">Login</button>
+          <p>Forgot Password? <a href="#">Reset here</a></p>
+        </form>
+        <form id="register-form" class="auth__form">
+          <input type="email" placeholder="Email" required />
+          <input
+            type="tel"
+            placeholder="Mobile Number"
+            required
+            pattern="[0-9]{10}"
+            title="Please enter a valid 10-digit mobile number"
+          />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Confirm Password" required />
+          <button type="submit" class="auth__btn">Register</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="showForm('login')">Login here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>
